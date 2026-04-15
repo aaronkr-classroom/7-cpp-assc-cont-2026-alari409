@@ -13,6 +13,7 @@ map<string, vector<int> > xref(
 	{
 		string line;
 int line_num = 0;
+int count;
 map < string, vector<int> > ret;
 
 // 다음 행을 읽음:
@@ -21,7 +22,7 @@ while (getline(in, line))
 	++line_num;
 
 	// 입력한 행을 단어로 나눔.
-	vector<string> word = find_words(line);
+	vector<string> words = find_words(line);
 
 	//현재 행에 등장한 모든 단어를 저장
 	for (vector<string>:: const_iterator it = words.begin();
